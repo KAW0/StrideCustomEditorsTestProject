@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net10.0-windows</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>    
+    <!-- Stride generates a per-checkout -devN suffix; float to the newest local dev package. -->
+    <PackageReference Include="Stride.Engine" Version="4.4.0-dev*" />
+    <PackageReference Include="Stride.Video" Version="4.4.0-dev*" />
+    <PackageReference Include="Stride.Physics" Version="4.4.0-dev*" />
+    <PackageReference Include="Stride.Navigation" Version="4.4.0-dev*" />
+    <PackageReference Include="Stride.Particles" Version="4.4.0-dev*" />
+    <PackageReference Include="Stride.UI" Version="4.4.0-dev*" />
+    <PackageReference Include="Stride.AssetCompiler" Version="4.4.0-dev*" IncludeAssets="build;buildTransitive" />
+  </ItemGroup>
+</Project>

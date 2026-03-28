@@ -1,0 +1,13 @@
+!ProceduralModelAsset
+Id: 838fce38-d4ac-4def-9e48-35e8803d6244
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Type: !TorusProceduralModel
+    Radius: 0.45
+    Thickness: 0.06
+    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+    UvScale: {X: 1.0, Y: 1.0}
+    LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+    NumberOfTextureCoordinates: 10
+    MaterialInstance:
+        Material: null

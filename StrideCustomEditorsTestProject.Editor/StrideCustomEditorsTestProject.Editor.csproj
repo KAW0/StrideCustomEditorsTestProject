@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net10.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="R3Extensions.Stride" Version="1.3.0"/>
+        <!-- Stride generates a per-checkout -devN suffix; float to the newest local dev package. -->
+        <PackageReference Include="Stride.Engine" Version="4.4.0-dev*"/>
+        <PackageReference Include="Stride.Video" Version="4.4.0-dev*"/>
+        <PackageReference Include="Stride.Physics" Version="4.4.0-dev*"/>
+        <PackageReference Include="Stride.Navigation" Version="4.4.0-dev*"/>
+        <PackageReference Include="Stride.Particles" Version="4.4.0-dev*"/>
+        <PackageReference Include="Stride.AssetCompiler" Version="4.4.0-dev*" IncludeAssets="build;buildTransitive"/>
+        <PackageReference Include="Stride.Editor" Version="4.4.0-dev*"/>
+        <PackageReference Include="Stride.Editor.CustomEditors" Version="4.4.0-dev*"/>
+        <PackageReference Include="Stride.Editor.CustomEditors.Wpf" Version="4.4.0-dev*"/>
+    </ItemGroup>
+
+</Project>

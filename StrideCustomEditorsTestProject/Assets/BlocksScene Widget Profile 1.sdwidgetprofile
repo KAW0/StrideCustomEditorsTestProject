@@ -1,0 +1,18 @@
+!SceneWidgetProfileAsset
+Id: 6b8dfde4-bc65-4e32-9d1c-e28e3b0e135a
+Tags: []
+Profile:
+    Id: e36d924139ef43b187ebb48c521df02c
+    Name: BlocksScene Widget Profile 1
+    Version: 1
+    Widgets:
+        ee47586cd47389431b0049a6060e67b4:
+            WidgetId: StrideCustomEditorsTestProject.Editor.SceneWidgets.TestSceneToolsWidgetViewModel
+            Placement: Top
+            Order: 0
+            Title: Test Scene Tools
+        e8f0dcb262402ef7a021a5c67b05cbdc:
+            WidgetId: StrideCustomEditorsTestProject.Editor.SceneWidgets.TestSceneStateWidgetViewModel
+            Placement: Top
+            Order: 1
+            Title: Test Scene State

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Stride GameStudio": {
+      "commandName": "Executable",
+      "executablePath": "C:\\NotMyProjects\\Repos\\CSharp\\stride-origin\\sources\\editor\\Stride.GameStudio\\bin\\Debug\\net10.0-windows\\Stride.GameStudio.exe",
+      "workingDirectory": "C:\\Projects\\Stride\\StrideCustomEditorsTestProject",
+      "commandLineArgs": "\"C:\\Projects\\Stride\\StrideCustomEditorsTestProject\\StrideCustomEditorsTestProject.sln\""
+    }
+  }
+}

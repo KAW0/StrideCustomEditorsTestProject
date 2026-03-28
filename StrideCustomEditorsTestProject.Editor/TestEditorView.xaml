@@ -1,0 +1,84 @@
+<views:CustomEditorView x:Class="StrideCustomEditorsTestProject.Editor.TestEditorView"
+                        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                        xmlns:views="clr-namespace:Stride.Editor.CustomEditors.Wpf.Views;assembly=Stride.Editor.CustomEditors.Wpf"
+                        mc:Ignorable="d"
+                        d:DesignHeight="280"
+                        d:DesignWidth="440">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Sample custom editor tools"
+                   FontSize="18"
+                   FontWeight="SemiBold" />
+
+        <StackPanel Grid.Row="1" Margin="0,12,0,0" Orientation="Horizontal" VerticalAlignment="Center">
+            <TextBlock Text="Spawn tag:" VerticalAlignment="Center" />
+            <TextBox Width="240"
+                     Margin="8,0,0,0"
+                     VerticalAlignment="Center"
+                     Text="{Binding SpawnTag, UpdateSourceTrigger=PropertyChanged}" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Margin="0,16,0,0" Orientation="Horizontal">
+            
+          
+            <ToggleButton Content="Paint Point"
+                          MinWidth="100"
+                          IsChecked="{Binding IsPaintPointToolActive, Mode=OneWay}"
+                          Command="{Binding TogglePaintPointToolCommand}" />
+            <ToggleButton Content="Delete"
+                          MinWidth="90"
+                          Margin="0,0,8,0"
+                          IsChecked="{Binding IsFillToolActive, Mode=OneWay}"
+                          Command="{Binding ToggleFillToolCommand}" />
+           <ToggleButton Content="Spawn"
+                                     MinWidth="90"
+                                     Margin="0,0,8,0"
+                                     IsChecked="{Binding IsSelectToolActive, Mode=OneWay}"
+                                     Command="{Binding ToggleSelectToolCommand}" />
+           
+           
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Margin="0,16,0,0" Orientation="Vertical">
+            
+            <TextBlock Margin="0,8,0,0" Text="{Binding StatusText}" />
+            <TextBlock Margin="0,4,0,0" Text="{Binding ActiveSceneViewLabel}" />
+            <TextBlock Margin="0,4,0,0" Text="{Binding ActiveToolHint}" />
+            <TextBlock Margin="0,4,0,0" Text="{Binding ActivePlacementPrefabLabel}" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Margin="0,16,0,0" Orientation="Vertical">
+            <Border Margin="0,12,0,0"
+                    Padding="10"
+                    BorderBrush="#FF909090"
+                    BorderThickness="1"
+                    CornerRadius="4">
+                <StackPanel>
+                    <TextBlock Text="Scene tool behavior"
+                               FontWeight="SemiBold" />
+                    <TextBlock Margin="0,4,0,0"
+                               Foreground="#FF666666"
+                               Text="Tools are now activated for the currently focused scene view. Different scene views can keep different active tools at the same time." />
+                    <TextBlock Margin="0,10,0,0" Text="Spawn -> PPM selects prefab, LPM places the selected prefab" />
+                    <TextBlock Margin="0,4,0,0" Text="Delete -> remove the current scene selection on LPM" />
+                    <TextBlock Margin="0,4,0,0" Text="Paint Point -> Sphere on LPM, shape list on PPM" />
+                    <TextBlock Margin="0,10,0,0"
+                               Foreground="#FF666666"
+                               Text="Focus a scene view before toggling a tool. The panel shows the tool assigned to the currently active scene view." />
+                    <TextBlock Margin="0,10,0,0"
+                               Text="{Binding LastToolAction}" />
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</views:CustomEditorView>
